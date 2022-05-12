@@ -1,2 +1,12 @@
 create table details(sno int,sname varchar(22),inserteddatetime timestamp default current_date,mark int check(mark>=0 and mark<=100))
 insert into details (sno,sname,mark) values (1002,'vishwa',-10)
+
+
+create table edetails(eno int unique,ename varchar(22),esal float unique)
+insert into edetails values(null,'dhanu',null)
+--truncate table edetails;
+drop table edetails;
+select * from edetails;
+
+--delete from edetails
+--delete from edetails where eno=101
