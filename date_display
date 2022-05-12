@@ -1,0 +1,3 @@
+--create table edetails(eno int,ename varchar(22),esal int,edob date)
+insert into edetails values(1002,'ramesh',5000,'29-feb-2020');
+select * from edetails;
