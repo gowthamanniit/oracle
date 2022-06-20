@@ -1,0 +1,31 @@
+--select * from employee
+-- select * from employee where salary >=20000  -- < <= >= != =
+--select * from employee where salary  not in (13000,10000,20000)
+--select * from employee where salary  between 10000 and 15000
+--select * from employee where ename like 'A%'
+--select * from employee where ename like '%A'
+--select * from employee where ename like 'A%A'
+--select * from employee where ename like '__A%'
+--select * from employee where dept='office' and salary >10000
+
+--create table dept (eno int,ename varchar(33),gender varchar(10),dept varchar(22),salary int)
+--insert into dept values(1005,'ramesh','male','computer',9000)
+--insert into dept values(1009,'rajesh','male','computer',12000)
+--insert into dept values(1001,'karthika','female','office',12500)
+
+insert into dept values(1001,'AAAA','male','office',20000)
+select eno,ename from dept group by eno,ename
+select distinct(eno),ename from dept
+select * from employee union  select * from dept
+select * from employee union all select * from dept
+select * from employee intersect select * from dept
+select eno from employee intersect select eno from dept
+
+select * from employee;
+select * from dept;
+
+select * from employee minus select * from dept;
+
+create table backup as select * from dept minus select * from employee;
+select * from dept minus select * from employee;
+select * from backup
