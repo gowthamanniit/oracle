@@ -1,0 +1,30 @@
+--create table stud1(rno int primary key,sname varchar(22),mark int)
+--insert into stud1 values(1004,'ganesh',59)
+--select * from stud1
+
+--create table stud2(rno int ,sname varchar(22),foreign key(rno) REFERENCES stud1(rno))
+--insert into stud2 values(1007,'gowthaman');
+--select * from stud2;
+
+--create table stud3(serialno int primary key, studname varchar(25),mark int,foreign key(serialno) references stud1)
+--create table stud3(serialno int primary key, studname varchar(25),mark int,foreign key(serialno) references stud1(rno))
+--insert into stud3 values(1005,'aaa',77)
+--select * from stud3
+
+-- create table stud4(sno int primary key,sname varchar(33),foreign key(sno) references stud2(rno))
+-- error : stud2 has no primary or unique 
+-- foreign key rule: source table column name must be primary or unique
+
+-- create table stud4(sno int primary key,sname varchar(33),foreign key(sno) references stud3(serialno))
+--insert into stud4 values(1001,'aaa')
+--select * from stud4
+
+--create table stud5(sno int unique, sname varchar(33))
+--insert into stud5 values(102,'aaaaaa')
+--select * from stud5
+
+--create table stud6(sno int,sname varchar(44),foreign key(sno) references stud5(sno))
+insert into stud6 values(105,'adfas')
+
+
+
