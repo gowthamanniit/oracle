@@ -1,0 +1,38 @@
+sal2021
+======
+eno ename sal 
+11   aaa      15000
+12  bbb      25000
+13  ccc       35000
+
+sal2022
+======
+eno ename sal 
+11  aaaA	18000
+12  bbb       28000
+14 kkk        30000
+
+inner join:
+11 aaa  15000    11  aaaA   18000
+12 bbb 25000    12  bbb     28000
+
+left outer join
+==========
+11 aaa  15000    11  aaaA   18000
+12 bbb 25000    12  bbb     28000
+13 ccc  35000    null null   null
+
+right outer join
+==========
+11 aaa  15000    11  aaaA   18000
+12 bbb 25000    12  bbb     28000
+null null   null    14 kkk     30000
+
+full outer join
+==========
+11 aaa  15000    11  aaaA   18000
+12 bbb 25000    12  bbb     28000
+13 ccc  35000    null null   null
+null null   null    14 kkk     30000
+
+
