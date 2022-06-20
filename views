@@ -1,0 +1,14 @@
+--select * from employee
+--create view myview as select eno,ename,dept from employee where dept='computer'
+select * from myview;
+select * from employee;
+insert into myview values(2999,'ssss','computer');
+delete from myview where eno=2999
+
+drop view myview;
+
+create table mytable as select * from employee 
+
+select * from mytable
+
+delete from mytable where salary<=15000
