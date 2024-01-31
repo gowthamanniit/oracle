@@ -1,0 +1,19 @@
+/*create table student(rno int,sname varchar(22),m1 int,m2 int,m3 int,m4 int,m5 int);*/
+--insert into student values (1005,'gayathri',56,57,38,49,58);
+--insert into student (rno,sname,m1,m2,m3,m4,m5) values (1006,'boomathi',86,17,28,39,98);
+/*alter table student add (tot int , avg float);*/
+/*alter table student add res varchar(10);*/
+/*alter table student add aadhar varchar(12);*/
+/*alter table student drop column aadhar;*/
+/*
+update student set tot=m1+m2+m3+m4+m5;
+update student set avg=tot/5;
+update student set res='pass' where m1>34 and m2>34 and m3>34 and m4>34 and m5>34;
+update student set res='fail' where m1<=34 or m2<=34 or m3<=34 or m4<=34 or m5<=34;
+*/
+--select * from student order by sname asc
+--select * from student order by sname desc;;
+--select rno,sname,res from student;
+--select * from student;
+--select distinct(res),count(res),sum(tot),max(m3),min(m3),avg(m3) from student group by res;
+select res,count(res),sum(tot),max(m3),min(m3),avg(m3) from student group by res;
