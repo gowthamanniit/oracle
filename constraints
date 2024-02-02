@@ -1,3 +1,50 @@
+Constraints:
+===========
+
+	1) primary key
+
+	rules:
+		- unique data only
+		- null not accept
+
+
+	syntax:
+
+create table tablename(col1 datatype,col2 datatype,col3 datatype,........,constraint constraintname primary key(col1,col2,..))
+
+	ex:
+
+create table student(rno int,sname varchar(22),mark float,constraint conrno primary key(rno))
+
+insert into stud (rno,sname) values (1993,'govind');
+
+select * from stud;
+
+
+	2) Default constraint
+	=====================
+
+	syntax:
+	
+	create table tablename(col1 datatype,col2 datatype default defaultvalue,col3 datatype,.)
+
+
+	ex:
+
+	create table emp(eno int,ename varchar(22),city varchar(22) default 'karur',address varchar(20));
+
+insert into emp (eno,ename,address) values(102,'ramesh','middle street');
+select * from emp;
+
+note: don't use double quotes when inserting varchar datatype and datetime.
+   
+	ex:advanced:
+
+create table emp1(eno int,ename varchar(22),city varchar(22) default 'karur',address varchar(20),etime timestamp default current_date);
+
+insert into emp1 (eno,ename,address) values (111,'karthi','west');
+select * from emp1;
+
 create table details(sno int,sname varchar(22),inserteddatetime timestamp default current_date,
 mark int check(mark>=0 and mark<=100))
 insert into details (sno,sname,mark) values (1002,'vishwa',-10)
