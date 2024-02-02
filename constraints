@@ -1,4 +1,5 @@
-create table details(sno int,sname varchar(22),inserteddatetime timestamp default current_date,mark int check(mark>=0 and mark<=100))
+create table details(sno int,sname varchar(22),inserteddatetime timestamp default current_date,
+mark int check(mark>=0 and mark<=100))
 insert into details (sno,sname,mark) values (1002,'vishwa',-10)
 
 
